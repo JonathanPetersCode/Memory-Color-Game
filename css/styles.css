@@ -1,0 +1,60 @@
+/* Canvas - Styles for card container */
+body{
+background-color: rgb(249, 243, 243);
+font-family: 'Indie Flower',
+cursive;
+}
+#canvas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+#header{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+}
+.title{
+    font-size: 2rem;
+}
+.description {
+    text-align: center;
+    font-size: 1.25rem;
+}
+/* .card - Apply styles to each card */
+.card{
+    width: 75px;
+    height: 75px;
+    background: 141313;
+    border: 2px solid rgb(15, 15, 15);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 25px;
+}
+/* Game Finished Screen Styles */
+#finished {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+/* Restart Button Styles */
+#restart {
+    padding: 20px 40px;
+    font-size: 32px;
+    background: #ff0000;
+    color: #ffffff;
+}
