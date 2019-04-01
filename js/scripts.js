@@ -1,10 +1,11 @@
-let cardsObject = {};
+let cardsObject = {}; // Empties the cards
+
 // JQuery Scripts Start
 $(document).ready(function () {
     // Variables
-       let numberOfCards = 8;
+       let numberOfCards = 12;
        let defaultColor = '#141313';
-       let arrayOfColors = ['#FF4747', '#A8ff56', '#FF4ba6', '#E8FD42', '#B854FF', '#BBBBBB'];
+       let arrayOfColors = ['red', 'blue', 'green', 'purple', 'orange', 'pink'];
        let firstCardSelected = '';
        let secondCardSelected = '';
        let score = 0;
@@ -23,6 +24,7 @@ $(document).ready(function () {
             'card11': arrayOfColors[4],
             'card12': arrayOfColors[5]
             }
+    shuffleCards();
     $('.card').click(function () {
         checkMatch();
            if (!firstCardSelected || !secondCardSelected)
@@ -33,22 +35,22 @@ $(document).ready(function () {
                let cardColor = cardsObject[cardId];
             // Find the color belonging to this card in the cardsObject and store it in a variable.
                $(this).css('background', cardColor);
-            // Change the color of the card we clicked to the color we stored in te cardColor variable.
+            // Change the color of the card clicked to the color stored in te cardColor variable.
                $(this).addClass('active');
             // Set this card the class active.
                if (!firstCardSelected) {
                    firstCardSelected = cardColor;
-                // Check if firstCardSelected is still empty, if it is we store this cards color in firstCardSelected.
+                // Check if firstCardSelected is still empty, if it is store this cards color in firstCardSelected.
                } else if (!secondCardSelected) {
                    secondCardSelected = cardColor;
-                // We check if secondCardSelected is still empty, if it is we store this cards color in secondCardSelected.
+                // Check if secondCardSelected is still empty, if it is store this cards color in secondCardSelected.
                    if (firstCardSelected === secondCardSelected) {
-                // With 2 cards now selected, we check if the colors match we incrment our score variable.
+                // With 2 cards now selected, check if the colors match incrment our score variable.
                        score++;
                        if (score >= numberOfCards / 2) {
                            gameFinished();
                        }
-                    // If score variable is higher or the same as half of our numberOfCards we win the game and call gameFinished();
+                    // If score variable is higher or the same as half of our numberOfCards win the game and call gameFinished();
                 }
             }
         }

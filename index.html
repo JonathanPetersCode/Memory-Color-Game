@@ -6,30 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Memory Game</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="canvas">
+    <div class="container">
         <div id="header">
             <h1 class="title">Color Memory Game</h1>
-            <h2 class="description">Use your memory to match each box with another box with the same color.</h2>
+            <h2 class="description">Use your memory to match each box with the corresponding box of the same color.</h2>
             <h2 class="description">Match all the boxes to win!</h2>
         </div>
-        <div id="card1" class="card"></div> 
-        <div id="card2" class="card"></div> 
-        <div id="card3" class="card"></div> 
-        <div id="card4" class="card"></div> 
-        <div id="card5" class="card"></div> 
-        <div id="card6" class="card"></div> 
-        <div id="card7" class="card"></div> 
-        <div id="card8" class="card"></div> 
-        <div id="card9" class="card"></div> 
-        <div id="card10" class="card"></div> 
-        <div id="card11" class="card"></div> 
-        <div id="card12" class="card"></div> 
+        <div id="canvas" class="animated bounce">
+            <div id="card1" class="card"></div> 
+            <div id="card2" class="card"></div> 
+            <div id="card3" class="card"></div> 
+            <div id="card4" class="card"></div> 
+            <div id="card5" class="card"></div> 
+            <div id="card6" class="card"></div> 
+            <div id="card7" class="card"></div> 
+            <div id="card8" class="card"></div> 
+            <div id="card9" class="card"></div> 
+            <div id="card10" class="card"></div> 
+            <div id="card11" class="card"></div> 
+            <div id="card12" class="card"></div> 
         <div id="finished">
-            <button id="restart">Thanks for Playing! Click here to reset.</button>
+            <button id="restart" class="animated tada">Thanks for Playing! Click here to reset.</button>
         </div>
+    </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
